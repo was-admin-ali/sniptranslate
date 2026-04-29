@@ -14,12 +14,12 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:20px 4
 .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .nav-logo{width:34px;height:34px;border-radius:8px;overflow:hidden;box-shadow:0 4px 16px rgba(108,99,255,.3)}
 .nav-logo img{width:100%;height:100%;object-fit:cover}
-.nav-name{font-family:"DM Sans",sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.nav-name{font-size:20px;font-weight:800;color:#fff;letter-spacing:-.02em}
 .nav-name em{font-style:normal;color:#48d8bf}
 .nav-links{display:flex;align-items:center;gap:20px}
 .nav-link{color:var(--m);text-decoration:none;font-size:14px;font-weight:500;transition:color .15s}
 .nav-link:hover{color:var(--tx)}
-.nav-cta{background:var(--a);color:#fff;padding:8px 20px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;transition:all .2s}
+.nav-cta{background:var(--a);color:#fff;padding:8px 20px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;transition:all .2s;display:flex;align-items:center;gap:8px}
 .nav-cta:hover{background:var(--a2);transform:translateY(-1px)}
 .hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px 60px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(108,99,255,.18) 0%,rgba(72,216,191,.06) 40%,transparent 70%);pointer-events:none}
@@ -29,7 +29,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:20px 4
 .hero h1 em{font-style:normal;color:var(--t)}
 .hero p{font-size:clamp(16px,2vw,20px);color:var(--m);max-width:560px;margin-bottom:44px;line-height:1.7}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-.btn-primary{background:linear-gradient(135deg,#6c63ff,#8b7cf6);color:#fff;padding:15px 32px;border-radius:13px;text-decoration:none;font-weight:700;font-size:16px;box-shadow:0 8px 32px rgba(108,99,255,.4);transition:all .2s;display:flex;align-items:center;gap:9px}
+.btn-primary{background:linear-gradient(135deg,#6c63ff,#8b7cf6);color:#fff;padding:15px 32px;border-radius:13px;text-decoration:none;font-weight:700;font-size:16px;box-shadow:0 8px 32px rgba(108,99,255,.4);transition:all .2s;display:flex;align-items:center;gap:10px}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(108,99,255,.5)}
 .btn-ghost{background:transparent;color:var(--tx);padding:15px 32px;border-radius:13px;text-decoration:none;font-weight:600;font-size:16px;border:1px solid var(--b);transition:all .2s}
 .btn-ghost:hover{border-color:rgba(108,99,255,.4);background:rgba(108,99,255,.08)}
@@ -39,10 +39,10 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:20px 4
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .feat{background:var(--s);border:1px solid var(--b);border-radius:18px;padding:28px;transition:all .25s}
 .feat:hover{border-color:rgba(108,99,255,.3);transform:translateY(-3px)}
-.feat-icon{font-size:28px;margin-bottom:16px}
+.feat-icon{width:44px;height:44px;border-radius:10px;background:rgba(108,99,255,.15);border:1px solid rgba(108,99,255,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--t)}
+.feat-icon svg{width:22px;height:22px}
 .feat h3{font-size:18px;font-weight:700;margin-bottom:8px}
 .feat p{font-size:14px;color:var(--m);line-height:1.6}
-
 footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--b);font-size:13px;color:var(--m)}
 footer a{color:var(--m);text-decoration:none;transition:color .15s}
 footer a:hover{color:var(--t)}
@@ -51,7 +51,7 @@ footer a:hover{color:var(--t)}
 .footer-logo img{width:100%;height:100%;object-fit:cover}
 .footer-links{display:flex;gap:20px;flex-wrap:wrap}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-@media(max-width:640px){nav{padding:14px 20px}.nav-links{gap:12px}.section{padding:60px 20px}.cta-band{padding:48px 20px}footer{padding:24px 20px;flex-direction:column;text-align:center}}
+@media(max-width:640px){nav{padding:14px 20px}.nav-links{gap:12px}.section{padding:60px 20px}footer{padding:24px 20px;flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
@@ -63,7 +63,10 @@ footer a:hover{color:var(--t)}
   <div class="nav-links">
     <a href="/pricing.html" class="nav-link">Pricing</a>
     <a href="mailto:aliamazn98@gmail.com" class="nav-link">Support</a>
-    <a href="https://chrome.google.com/webstore" class="nav-cta" target="_blank">Add to Chrome</a>
+    <a href="https://chrome.google.com/webstore" class="nav-cta" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.5003 24.7497C21.0569 24.7497 24.7507 21.0557 24.7507 16.4991C24.7507 11.9425 21.0569 8.24863 16.5003 8.24863C11.9437 8.24863 8.25 11.9425 8.25 16.4991C8.25 21.0557 11.9437 24.7497 16.5003 24.7497Z" fill="white"/><path d="M9.3552 20.6264L2.21126 8.25269C0.762724 10.7609 0 13.6061 0 16.5027C0 19.3992 0.762378 22.2445 2.21074 24.7527C3.6591 27.2609 5.74235 29.3438 8.25087 30.7914C10.7594 32.2391 13.605 33.001 16.5014 33.0001L23.6453 20.6264V20.6245C22.9218 21.8794 21.8805 22.9215 20.6263 23.6461C19.3721 24.3707 17.9493 24.7523 16.5009 24.7525C15.0524 24.7527 13.6295 24.3715 12.3751 23.6473C11.1207 22.923 10.0792 21.8813 9.3552 20.6267V20.6264Z" fill="#229342"/><path d="M23.6448 20.6258L16.501 32.9995C19.3974 33 22.2429 32.2376 24.7512 30.7896C27.2596 29.3416 29.3425 27.2585 30.7905 24.75C32.2384 22.2415 33.0005 19.396 33 16.4997C32.9995 13.6033 32.2364 10.758 30.7875 8.25H16.4998L16.4981 8.25122C17.9465 8.25053 19.3696 8.63123 20.6242 9.35503C21.8789 10.079 22.9207 11.1202 23.6451 12.3746C24.3696 13.6289 24.7509 15.0518 24.7509 16.5003C24.7509 17.9488 24.3694 19.3717 23.645 20.626L23.6448 20.6258Z" fill="#FBC116"/><path d="M16.5004 23.0326C20.1077 23.0326 23.0319 20.1083 23.0319 16.5008C23.0319 12.8934 20.1077 9.96927 16.5004 9.96927C12.893 9.96927 9.96878 12.8935 9.96878 16.5008C9.96878 20.1082 12.893 23.0326 16.5004 23.0326Z" fill="#1A73E8"/><path d="M16.5004 8.25052H30.7881C29.3402 5.742 27.2575 3.65876 24.7491 2.2104C22.2409 0.762132 19.3955 -0.00021984 16.4991 4.75538e-08C13.6028 0.000173276 10.7575 0.762903 8.24949 2.21161C5.7414 3.66024 3.65891 5.74367 2.21144 8.25242L9.35538 20.6261L9.35729 20.6272C8.63246 19.3731 8.25062 17.9503 8.25016 16.5018C8.24971 15.0534 8.63065 13.6303 9.35469 12.3758C10.0786 11.1213 11.1204 10.0795 12.3748 9.35537C13.6291 8.63127 15.0522 8.25 16.5007 8.25035L16.5004 8.25052Z" fill="#E33B2E"/></svg>
+      Add to Chrome
+    </a>
   </div>
 </nav>
 <section class="hero">
@@ -71,7 +74,10 @@ footer a:hover{color:var(--t)}
   <h1>Translate anything on your screen — <em>instantly</em></h1>
   <p>Drag over any text, image, or video subtitle. SnipTranslate reads and translates it in seconds. Works everywhere, even on YouTube.</p>
   <div class="hero-btns">
-    <a href="https://chrome.google.com/webstore" class="btn-primary" target="_blank">Add to Chrome</a>
+    <a href="https://chrome.google.com/webstore" class="btn-primary" target="_blank">
+      <svg width="20" height="20" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.5003 24.7497C21.0569 24.7497 24.7507 21.0557 24.7507 16.4991C24.7507 11.9425 21.0569 8.24863 16.5003 8.24863C11.9437 8.24863 8.25 11.9425 8.25 16.4991C8.25 21.0557 11.9437 24.7497 16.5003 24.7497Z" fill="white"/><path d="M9.3552 20.6264L2.21126 8.25269C0.762724 10.7609 0 13.6061 0 16.5027C0 19.3992 0.762378 22.2445 2.21074 24.7527C3.6591 27.2609 5.74235 29.3438 8.25087 30.7914C10.7594 32.2391 13.605 33.001 16.5014 33.0001L23.6453 20.6264V20.6245C22.9218 21.8794 21.8805 22.9215 20.6263 23.6461C19.3721 24.3707 17.9493 24.7523 16.5009 24.7525C15.0524 24.7527 13.6295 24.3715 12.3751 23.6473C11.1207 22.923 10.0792 21.8813 9.3552 20.6267V20.6264Z" fill="#229342"/><path d="M23.6448 20.6258L16.501 32.9995C19.3974 33 22.2429 32.2376 24.7512 30.7896C27.2596 29.3416 29.3425 27.2585 30.7905 24.75C32.2384 22.2415 33.0005 19.396 33 16.4997C32.9995 13.6033 32.2364 10.758 30.7875 8.25H16.4998L16.4981 8.25122C17.9465 8.25053 19.3696 8.63123 20.6242 9.35503C21.8789 10.079 22.9207 11.1202 23.6451 12.3746C24.3696 13.6289 24.7509 15.0518 24.7509 16.5003C24.7509 17.9488 24.3694 19.3717 23.645 20.626L23.6448 20.6258Z" fill="#FBC116"/><path d="M16.5004 23.0326C20.1077 23.0326 23.0319 20.1083 23.0319 16.5008C23.0319 12.8934 20.1077 9.96927 16.5004 9.96927C12.893 9.96927 9.96878 12.8935 9.96878 16.5008C9.96878 20.1082 12.893 23.0326 16.5004 23.0326Z" fill="#1A73E8"/><path d="M16.5004 8.25052H30.7881C29.3402 5.742 27.2575 3.65876 24.7491 2.2104C22.2409 0.762132 19.3955 -0.00021984 16.4991 4.75538e-08C13.6028 0.000173276 10.7575 0.762903 8.24949 2.21161C5.7414 3.66024 3.65891 5.74367 2.21144 8.25242L9.35538 20.6261L9.35729 20.6272C8.63246 19.3731 8.25062 17.9503 8.25016 16.5018C8.24971 15.0534 8.63065 13.6303 9.35469 12.3758C10.0786 11.1213 11.1204 10.0795 12.3748 9.35537C13.6291 8.63127 15.0522 8.25 16.5007 8.25035L16.5004 8.25052Z" fill="#E33B2E"/></svg>
+      Add to Chrome — It's Free
+    </a>
     <a href="/pricing.html" class="btn-ghost">See Pro plans ↓</a>
   </div>
 </section>
@@ -79,19 +85,42 @@ footer a:hover{color:var(--t)}
   <div class="section-label">What it does</div>
   <h2>Everything you need to break language barriers</h2>
   <div class="features">
-    <div class="feat"><div class="feat-icon">🖱️</div><h3>Drag to Translate</h3><p>Select any text on any webpage by dragging over it. Translation appears instantly above your selection.</p></div>
-    <div class="feat"><div class="feat-icon">🔍</div><h3>OCR for Images</h3><p>Translate text inside screenshots, banners, memes, or any image — even if you can't select it with your cursor.</p></div>
-    <div class="feat"><div class="feat-icon">🎬</div><h3>Video Subtitles</h3><p>Drag over video frames on YouTube and other platforms to translate burned-in subtitles on the fly.</p></div>
-    <div class="feat"><div class="feat-icon">🌍</div><h3>100+ Languages</h3><p>Translate between over 100 languages with automatic source language detection. No setup required.</p></div>
-    <div class="feat"><div class="feat-icon">⚡</div><h3>Multi-API Fallback</h3><p>Uses multiple translation APIs with automatic fallback — so it always works, even when one service is down.</p></div>
-    <div class="feat"><div class="feat-icon">🔑</div><h3>No API Key Needed</h3><p>Works out of the box. No account, no API key, no configuration. Just install and start translating.</p></div>
+    <div class="feat">
+      <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 9L2 12M2 12L5 15M2 12H22M22 12L19 9M22 12L19 15M9 5L12 2M12 2L15 5M12 2V22M12 22L15 19M12 22L9 19" stroke="#48d8bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Drag to Translate</h3>
+      <p>Select any text on any webpage by dragging over it. Translation appears instantly above your selection.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 21L16.65 16.65M11 6C13.7614 6 16 8.23858 16 11M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#48d8bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>OCR for Images</h3>
+      <p>Translate text inside screenshots, banners, memes, or any image — even if you can't select it with your cursor.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21.5813 7.19989C21.4733 6.76846 21.2534 6.37318 20.9438 6.05395C20.6341 5.73473 20.2457 5.50287 19.8178 5.3818C18.2542 5 12 5 12 5C12 5 5.74578 5 4.18222 5.41816C3.75429 5.53923 3.36588 5.77109 3.05623 6.09031C2.74659 6.40954 2.52666 6.80482 2.41868 7.23625C2.13253 8.82303 1.99255 10.4327 2.00052 12.0451C1.99032 13.6696 2.1303 15.2916 2.41868 16.8903C2.53773 17.3083 2.76258 17.6886 3.0715 17.9943C3.38043 18.3 3.76299 18.5209 4.18222 18.6357C5.74578 19.0538 12 19.0538 12 19.0538C12 19.0538 18.2542 19.0538 19.8178 18.6357C20.2457 18.5146 20.6341 18.2827 20.9438 17.9635C21.2534 17.6443 21.4733 17.249 21.5813 16.8176C21.8653 15.2427 22.0052 13.6453 21.9995 12.0451C22.0097 10.4206 21.8697 8.79862 21.5813 7.19989Z" stroke="#48d8bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.75 9.46533V14.5347L14.9254 11.3271L9.75 9.46533Z" stroke="#48d8bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Video Subtitles</h3>
+      <p>Drag over video frames on YouTube and other platforms to translate burned-in subtitles on the fly.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22M12 2C9.49872 4.73835 8.07725 8.29203 8 12C8.07725 15.708 9.49872 19.2616 12 22M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22M2.50002 9H21.5M2.5 15H21.5" stroke="#48d8bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>100+ Languages</h3>
+      <p>Translate between over 100 languages with automatic source language detection. No setup required.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09344 12.6879C3.74463 13.1064 3.57023 13.3157 3.56756 13.4925C3.56524 13.6461 3.63372 13.7923 3.75324 13.8889C3.89073 14 4.16316 14 4.70802 14H12L11 22L19.9065 11.3121C20.2553 10.8936 20.4297 10.6843 20.4324 10.5075C20.4347 10.3539 20.3663 10.2077 20.2467 10.1111C20.1092 10 19.8368 10 19.292 10H12L13 2Z" stroke="#48d8bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Multi-API Fallback</h3>
+      <p>Uses multiple translation APIs with automatic fallback — so it always works, even when one service is down.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 8.99994C17 8.48812 16.8047 7.9763 16.4142 7.58579C16.0237 7.19526 15.5118 7 15 7M15 15C18.3137 15 21 12.3137 21 9C21 5.68629 18.3137 3 15 3C11.6863 3 9 5.68629 9 9C9 9.27368 9.01832 9.54308 9.05381 9.80704C9.11218 10.2412 9.14136 10.4583 9.12172 10.5956C9.10125 10.7387 9.0752 10.8157 9.00469 10.9419C8.937 11.063 8.81771 11.1823 8.57913 11.4209L3.46863 16.5314C3.29568 16.7043 3.2092 16.7908 3.14736 16.8917C3.09253 16.9812 3.05213 17.0787 3.02763 17.1808C3 17.2959 3 17.4182 3 17.6627V19.4C3 19.9601 3 20.2401 3.10899 20.454C3.20487 20.6422 3.35785 20.7951 3.54601 20.891C3.75992 21 4.03995 21 4.6 21H7V19H9V17H11L12.5791 15.4209C12.8177 15.1823 12.937 15.063 13.0581 14.9953C13.1843 14.9248 13.2613 14.8987 13.4044 14.8783C13.5417 14.8586 13.7588 14.8878 14.193 14.9462C14.4569 14.9817 14.7263 15 15 15Z" stroke="#48d8bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>No API Key Needed</h3>
+      <p>Works out of the box. No account, no API key, no configuration. Just install and start translating.</p>
+    </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-brand">
     <div class="footer-logo"><img src="data:image/png;base64,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" alt=""></div>
-    <span>© 2025 SnipTranslate · Built by Ali A.</span>
+    <span>© 2025 SnipTranslate · Built by Ali</span>
   </div>
   <div class="footer-links">
     <a href="/pricing.html">Pricing</a>
